@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100dvw;
+  min-height: 100dvh;
+
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: rgb(44, 44, 44);
+}
+
+@layer components {
+
+  .description-block {
+    @apply text-center pt-2
+  }
+  .title {
+    @apply text-[30px] font-bold sm:text-[43px]
+  }
+  .description-text {
+    @apply text-white opacity-50 text-[12px] md:text-xl 
+  }
+  
+
+  .input {
+    @apply p-1 mt-7 h-8 w-[150px] flex items-center justify-center p-0 bg-zinc-300 
+  }
+  .input-color {
+    @apply block w-9 h-[100%] p-0 border-0 outline-0 outline-none bg-transparent
+  }
+  .input-text {
+    @apply block focus:outline-0 w-[60%] ml-1 bg-transparent
+  }
+
+
+  .generate-button {
+    @apply m-auto block bg-zinc-900 sm:mt-4 mt-2 p-3 pt-1 pb-1 rounded-md font-semibold text-white border-gray-950 border-2
+  }
+  
+
+  .palette-container {
+    @apply mt-2 w-full flex justify-around
+  }
+  .palette {
+    @apply p-2 w-[48%] 
+  }
+  .palette-text {
+    @apply text-center text-[25px] pb-2
+  }
+  .generated-colors-block {
+    @apply flex flex-col gap-2 justify-between
+  }
+  .color-block {
+    @apply h-16 flex items-center justify-center select-none cursor-pointer
+  }
+  
+}
